@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="menuConteiner">
+            <div class="parte1">
+                <img src="img\MicrosoftTeams-image.png" height="44px" alt="">
+                <ul>
+                    <li>Início</li>
+                    <li><a href="C:\Users\rm87169\Downloads\polidez\leaderbox\leaderbox.html">Ranking</a></li>
+                    <li><a href="C:\Users\rm87169\Downloads\polidez\NOTICIAS\noticias.html">Notícias</a></li>
+                    <li>Candidatos e Partidos</li>
+                    <li>Cadastro</li>
+                </ul>
+            </div>
+            <div class="login-btn">
+                <button>Login</button>
+            </div>
+        </div>
+        </header>
+        <div class="leaderboard">
+            <div class="description">
+                <h3>RANKING</h3>
+                <p>Nos últimos 30 dias</p>
+                <input class="search" placeholder="search" id="search" oninput="search()">
+                <table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>
+                                Candidato
+                            </td>
+                            <td>
+                                Partidos
+                            </td>
+                            <td>
+                                Respostas
+                            </td>
+                        </tr>
+                        </thead>
+                    <tbody>
+                    <tr>
+                        <td id="winner">1</id>
+                        <td><img src="img\teste1.jpg"><p>Simone</p></td>
+                        <td>PSDB</td>
+                        <td>909</td>
+                    </tr>
+
+                    <tr>
+                        <td id="winner2">2</id>
+                        <td><img src="img/teste2.jpg"><p>Sandra </p></td>
+                        <td>BQB</td>
+                        <td>777</td>
+                    </tr>
+
+                    <tr>
+                        <td id="winner3">3</id>
+                        <td><img src="img\teste3.jpg"><p> Juliano </p></td>
+                        <td>SQT</td>
+                        <td>654</td>
+                    </tr>
+
+                    <tr>
+                        <td id="winner4">4</id>
+                        <td><img src="img\teste4.jpg"> <p>Juliana</p></td>
+                        <td>234</td>
+                        <td>567</td>
+                    </tr>
+
+                    <tr>
+                        <td id="winner5">5</id>
+                        <td><img src="img\teste4.jpg"><p>Juliana</p></td>
+                        <td>TLS</td>
+                        <td>320</td>
+                    </tr>
+
+                    <tr>
+                        <td id="winner6">6</id>
+                        <td><img src="img\teste4.jpg"><p>Juliana</p></td>
+                        <td>BVC</td>
+                        <td>198</td>
+                    </tr>
+                   </tbody>
+                </table>
+            </div>
+        </div>
+</body>
+<script>
+    function search(){
+        var text = document.getElementById('search').value;
+        const tr = document.getElementsByTagName('tr');
+        for(let i=1;i<tr.legth;i++){
+            if(!tr[i].children[1].children[1].innerHTML.toLowerCase().includes(
+                text.toLowerCase()
+            )){
+                tr[i].style.display = 'none';
+            }
+            else{
+                tr[i].style.display = '';
+            }
+        }
+    }
+</script>
+<footer class="footer">
+    <p>Polidez © 2023 | All rights reserved </p>
+</footer>
+
+</html>
