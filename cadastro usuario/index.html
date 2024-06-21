@@ -15,25 +15,27 @@
         <section class="form-box">
             <h2>Criar conta</h2>
             <p> Já tem conta? <a href="#">Login</a></p>
-            <form id="form">
-                <section class="input-group">
-                    <label for="nome"> Nome Completo<a>*</a></label>
-                    <input type="text" id="nome" placeholder="Digite seu nome completo" class="inputs required" oninput="nameValidate()">
+            <form id="form" class="form">
+                <section class="form-content">
+                    <label for="nome"> Nome Completo*</label>
+                    <input type="text" id="username" placeholder="Digite seu nome completo" >
+                    <a class="msgerro">Aqui vai a mensagem de erro</a>
                 </section>
 
-                <section class="input-group">
+                <section class="form-content">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="Digite seu email" class="inputs required">
-                    <span id="error-email"></span>
+                    <input type="email" id="email" placeholder="Digite seu email" >
+                    <a class="msgerro">Aqui vai a mensagem de erro</a>
                 </section>
 
-                <section class="input-group">
+                <section class="form-content">
                     <label for="data_nascimento"><b>Data de Nascimento<a>*</a></b></label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" class="inputs required">
+                    <input type="date" name="data_nascimento" id="data_nascimento">
+                    <a class="msgerro">Aqui vai a mensagem de erro</a>
                 </section>
 
-                <section class="input-group required">
-                    <label> Estado <a>*</a></label>
+                <section class="form-content">
+                    <label> Estado *</label>
                     <select id="estado">
                         <option >Selecione</option>
                         <option>Acre</option>
@@ -66,22 +68,23 @@
                         </select>
                     </section>
 
-                    <section class="input-group required">
+                    <section class="form-content" >
                         <label for="senha">Senha</label>
-                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                        <input type="password" id="password" placeholder="Digite sua senha">
+                        <a class="msgerro">Aqui vai a mensagem de erro</a>
                     </section>
         
-                    <section class="input-group required">
-                        <label for="confirmasenha">Confirmar Senha</label>
-                        <input type="password" id="confirmasenha" placeholder="Confirme sua senha" required method="POST">
+                    <section class="form-content">
+                        <label for="password-corfimation">Confirmar Senha</label>
+                        <input type="password" id="password-corfimation" placeholder="Confirme sua senha">
+                        <a class="msgerro">Aqui vai a mensagem de erro</a>
                     </section>
 
-                    <section class="input-group required">
+                    <section class="form-content">
                         <button type="submit">Cadastrar</button>
                     </section>
 
             </form>
-            <p id="mensagem"></p>
         </section>
     </section>
 </body>
