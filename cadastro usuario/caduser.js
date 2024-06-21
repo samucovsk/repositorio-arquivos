@@ -8,10 +8,16 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     checkForm();
-
-    alert("Cadastrado com sucesso!")
     
 })
+
+email.addEventListener("blur", () => {
+    checkInputEmail();
+})
+username.addEventListener("blur", () => {
+    checkInputUsername();
+})
+
 
 function checkInputUsername(){
     const usernameValue = username.value;
@@ -71,15 +77,13 @@ function checkInputPasswordConfirmation(){
         const formItems = form.querySelectorAll(".form-content")
       
         const isValid = [...formItems].every( (item) => {
-          return item.className === "form-content"
+            return item.className === "form-content"
         });
-      
-        if(isValid){
-          alert("CADASTRADO COM SUCESSO!")
-        }
 
-    
-}
+        if(isValid){
+            alert("Cadastrado com sucesso")
+        }}
+      
 
 function errorInput(input, message){
     const formItem = input.parentElement;
