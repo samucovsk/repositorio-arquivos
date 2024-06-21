@@ -60,20 +60,23 @@ function checkInputPasswordConfirmation(){
     }else{
         const formItem = passwordConfirmation.parentElement;
         formItem.className = "form-content"
-    }
+    }}
 
-function checkForm(){
-    checkInputUsername();
-    checkInputEmail();
-    checkInputPassword();
-    checkInputPasswordConfirmation();
-
-    const formItems = form.querySelectorAll(".form-content")
-
-    const isValid = [...formItems];
-
-    console.log(isValid);
-}
+    function checkForm(){
+        checkInputUsername();
+        checkInputEmail();
+        checkInputPassword();
+        checkInputPasswordConfirmation();
+      
+        const formItems = form.querySelectorAll(".form-content")
+      
+        const isValid = [...formItems].every( (item) => {
+          return item.className === "form-content"
+        });
+      
+        if(isValid){
+          alert("CADASTRADO COM SUCESSO!")
+        }
 
     
 }
